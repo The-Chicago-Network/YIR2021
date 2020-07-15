@@ -1,6 +1,22 @@
-$font-stack: ;
-$light-blue: ;
-$dark-blue: ;
-$yellow: ;
-$gray: ;
-$pink: ;
+@import url("https://use.typekit.net/dcu0sca.css");
+//Fonts
+$font-stack: din-2014, sans-serif;
+$font-narrow: din-2014-narrow, sans-serif; 
+
+$weight-light: 200;
+$weight-regular: 400;
+$weight-bold: 700;
+
+//Colors
+$light-blue: #48a7a7;
+$dark-blue: #4885aa;
+$yellow: #c8b638;
+$dark-dark-blue: #407989;
+$gray: #58595b;
+$pink: #cb96a3;
+$dark-pink: #ad96a4;
+
+body {
+    font: $font-stack;
+    color: $gray;
+}
