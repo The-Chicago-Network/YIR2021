@@ -1,4 +1,3 @@
-@import url("https://use.typekit.net/dcu0sca.css");
 //Fonts
 $font-stack: din-2014, sans-serif;
 $font-narrow: din-2014-narrow, sans-serif; 
@@ -8,15 +7,129 @@ $weight-regular: 400;
 $weight-bold: 700;
 
 //Colors
-$light-blue: #48a7a7;
-$dark-blue: #4885aa;
-$yellow: #c8b638;
-$dark-dark-blue: #407989;
-$gray: #58595b;
-$pink: #cb96a3;
-$dark-pink: #ad96a4;
+$light-blue: #48a7a7;           //rgb(72,167,167)
+$dark-blue: #4885aa;            //rgb(72,133,170)
+$yellow: #c8b638;               //rgb(200,182,56)
+$dark-dark-blue: #407989;       //rgb(64,121,137)
+$gray: #58595b;                 //rgb(88,89,91)
+$pink: #cb96a3;                 //rgb(203,150,163)
+$dark-pink: #ad96a4;            //rgb(173,150,164)
+
+//Extend
+%quick-transition {
+    transition: all;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+%parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 body {
-    font: $font-stack;
+    font-family: $font-stack;
     color: $gray;
+    font-weight: $weight-light;
+    margin: 0 0 0 0;
+}
+
+h1, h2 {
+    font-weight: $weight-light;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+h1 {
+    margin-top: -5rem;
+    color: $light-blue;
+    text-align: center;
+
+    #h1date {
+        font-size: 15rem;
+        line-height: 13rem;
+    }
+    
+    #h1sub {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+        color: $gray;
+        margin-left: -1.8rem;
+    }
+}
+
+nav {
+    min-height: 5rem;
+    width: 100%;
+    background-color: $pink;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    #navlogo {
+
+        img {
+            width: 17rem;
+            margin: -1.75rem auto -2rem auto;
+        }
+    }
+
+    #navlinks {
+        display: flex;
+        width: 100%;
+        min-height: 5rem;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 3rem;
+        
+        a {
+          
+            button {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: $weight-regular;
+                min-height: 5rem;
+                border: none;
+                background-color: transparent;
+                padding: 0 1rem 0 1rem;
+                @extend %quick-transition;
+            }
+            button:hover {
+                background-color: rgba(255, 255, 255, .2);
+            }
+        }
+    }
+}
+
+header {
+    background-color: white;
+    @extend %parallax;
+    @extend %flex-center;
+}
+
+.slide, .transition, header {
+    height: 100vh;
+    background-size: cover;
+}
+
+.slide, .transition {
+    padding: 20rem 10rem 20rem 10rem;
+}
+
+#welcome {
+    background-color: $dark-dark-blue;
+}
+
+.transition {
+    background-image: linear-gradient(135deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 60%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%), url("http://unsplash.it/1440?random");
+    @extend %parallax;
 }
