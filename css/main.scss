@@ -73,6 +73,7 @@ nav {
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 1;
 
     #navlogo {
 
@@ -119,6 +120,7 @@ header {
 .slide, .transition, header {
     height: 100vh;
     background-size: cover;
+    overflow: hidden;
 }
 
 .slide, .transition {
@@ -132,4 +134,8 @@ header {
 .transition {
     background-image: linear-gradient(135deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 60%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%), url("http://unsplash.it/1440?random");
     @extend %parallax;
+    
+    h2 {
+        color: white;
+    }
 }
