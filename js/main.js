@@ -17,14 +17,3 @@ const RELLAXFOUR = new Rellax('.rellax4', {
     wrapper:".transition4",
     relativeToWrapper: true
 });
-
-let slideTitles = document.querySelectorAll(".slide > h2");
-let slideParagraphs = document.querySelectorAll(".slide > p");
-
-console.log(slideTitles);
-
-for (let i = 0; i < slideTitles.length; i++) {
-    slideTitles[i].setAttribute("data-aos", "fade-up");
-    slideTitles[i].classList.add("aos-init");
-    slideParagraphs[i].setAttribute("data-aos", "fade-up");
-}
