@@ -34,11 +34,16 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
     justify-content: center;
 }
 
+%clip-hexagon {
+    clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+}
+
 body {
     font-family: $font-stack;
     color: $gray;
     font-weight: $weight-light;
     margin: 0 0 0 0;
+    font-size: 1.25rem;
 }
 
 h1, h2 {
@@ -118,7 +123,7 @@ header {
 }
 
 .slide, .transition, header {
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     overflow: hidden;
     h2 {
@@ -132,6 +137,7 @@ header {
 
 #welcome {
     background-color: $light-blue;
+    color: white;
     #chairHeadshots {
         display: flex;
         div {
@@ -141,7 +147,7 @@ header {
             margin-left: -1rem;
         }
         img {
-            clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+            @extend %clip-hexagon;
         }
     }
 }
@@ -152,5 +158,36 @@ header {
     
     h2 {
         color: white;
+    }
+}
+
+table {
+    #value-green {
+        background-color: $light-blue;
+    }
+    
+    #value-pink {
+        background-color: $pink;
+    }
+    
+    #value-yellow {
+        background-color: $yellow;
+    }
+    
+    #value-dblue {
+        background-color: $dark-blue;
+    }
+
+    td {
+        padding-left: 2rem;
+        vertical-align: text-top;
+    }
+
+    td:nth-child(2) {
+        max-width: 9rem;
+    }
+
+    td.color-bar {
+        padding-left: .5rem;
     }
 }

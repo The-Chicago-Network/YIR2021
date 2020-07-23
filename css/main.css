@@ -16,11 +16,16 @@ header {
   justify-content: center;
 }
 
+#welcome #chairHeadshots img {
+  clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+}
+
 body {
   font-family: din-2014, sans-serif;
   color: #58595b;
   font-weight: 200;
   margin: 0 0 0 0;
+  font-size: 1.25rem;
 }
 
 h1, h2 {
@@ -92,7 +97,7 @@ header {
 }
 
 .slide, .transition, header {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   overflow: hidden;
 }
@@ -107,6 +112,7 @@ header {
 
 #welcome {
   background-color: #48a7a7;
+  color: white;
 }
 
 #welcome #chairHeadshots {
@@ -121,14 +127,39 @@ header {
   margin-left: -1rem;
 }
 
-#welcome #chairHeadshots img {
-  clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
-}
-
 .transition {
   background-image: linear-gradient(135deg, #48a7a7 0%, rgba(72, 167, 167, 0.6) 60%, rgba(0, 0, 0, 0) 60%, rgba(255, 255, 255, 0) 100%), url("http://unsplash.it/1440?random");
 }
 
 .transition h2 {
   color: white;
+}
+
+table #value-green {
+  background-color: #48a7a7;
+}
+
+table #value-pink {
+  background-color: #cb96a3;
+}
+
+table #value-yellow {
+  background-color: #c8b638;
+}
+
+table #value-dblue {
+  background-color: #4885aa;
+}
+
+table td {
+  padding-left: 2rem;
+  vertical-align: text-top;
+}
+
+table td:nth-child(2) {
+  max-width: 9rem;
+}
+
+table td.color-bar {
+  padding-left: .5rem;
 }
