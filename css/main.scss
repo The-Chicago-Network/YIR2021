@@ -96,6 +96,7 @@ nav {
         justify-content: flex-end;
         align-items: center;
         padding-right: 3rem;
+        position: fixed;
         
         a {
           
@@ -110,17 +111,18 @@ nav {
                 padding: 0 1rem 0 1rem;
 
                 @extend %quick-transition;
-
-                :hover {
-                    background-color: rgba(255, 255, 255, .2);
-                }  
             }
+            
+            button:hover {
+                background-color: rgba(255, 255, 255, .2);
+            }  
         }
     }
 }
 
 header {
     background-color: white;
+    z-index: 1;
     @extend %parallax;
     @extend %flex-center;
 }
@@ -230,6 +232,6 @@ table {
     display: block;
     min-width: 100vw;
     min-height: 100vh;
-    z-index: 0;
+    z-index: 1;
     position: absolute;
 }

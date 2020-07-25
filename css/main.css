@@ -76,6 +76,7 @@ nav #navlinks {
   justify-content: flex-end;
   align-items: center;
   padding-right: 3rem;
+  position: fixed;
 }
 
 nav #navlinks a button {
@@ -89,12 +90,13 @@ nav #navlinks a button {
   padding: 0 1rem 0 1rem;
 }
 
-nav #navlinks a button :hover {
+nav #navlinks a button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 header {
   background-color: white;
+  z-index: 1;
 }
 
 .slide, .transition, header {
@@ -197,6 +199,6 @@ table td.color-bar {
   display: block;
   min-width: 100vw;
   min-height: 100vh;
-  z-index: 0;
+  z-index: 1;
   position: absolute;
 }
