@@ -112,7 +112,7 @@ nav {
 
                 @extend %quick-transition;
             }
-            
+
             button:hover {
                 background-color: rgba(255, 255, 255, .2);
             }  
@@ -234,4 +234,11 @@ table {
     min-height: 100vh;
     z-index: 1;
     position: absolute;
+}
+
+noscript {
+    p {
+        font-size: 5rem;
+        color: red;
+    }
 }

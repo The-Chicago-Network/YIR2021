@@ -202,3 +202,8 @@ table td.color-bar {
   z-index: 1;
   position: absolute;
 }
+
+noscript p {
+  font-size: 5rem;
+  color: red;
+}
