@@ -56,6 +56,7 @@ h1 {
     margin-top: -5rem;
     color: $light-blue;
     text-align: center;
+    z-index: 1;
 
     #h1date {
         font-size: 15rem;
@@ -78,7 +79,7 @@ nav {
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 5;
 
     #navlogo {
 
@@ -107,10 +108,12 @@ nav {
                 border: none;
                 background-color: transparent;
                 padding: 0 1rem 0 1rem;
+
                 @extend %quick-transition;
-            }
-            button:hover {
-                background-color: rgba(255, 255, 255, .2);
+
+                :hover {
+                    background-color: rgba(255, 255, 255, .2);
+                }  
             }
         }
     }
@@ -161,6 +164,7 @@ header {
     }
 }
 
+// Mission & Values
 table {
     #value-green {
         background-color: $light-blue;
@@ -190,4 +194,42 @@ table {
     td.color-bar {
         padding-left: .5rem;
     }
+}
+
+// Equity Principles Logos
+#logos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    .EPlogo, .EPname {
+        background-color: white;
+        padding: 1rem;
+        width: 7rem;
+        height: 7rem;
+        margin: .5rem;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @extend %quick-transition;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    
+    .EPlogo:hover, .EPname:hover {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.55);
+    }
+}
+
+.particles-js-canvas-el {
+    display: block;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 0;
+    position: absolute;
 }
