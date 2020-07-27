@@ -24,7 +24,6 @@ let rellaxElems = [];
 for (let i = 0; i < rellaxArr.length; i++) {
     let parallaxItem = "rellax"+i;
     let wrapperClass = "wrapper"+i;
-    rellaxCont = {};
     // Add classes to parallax elements & wrappers
     rellaxArr[i].parentElement.classList.add(wrapperClass);
     rellaxArr[i].classList.add(parallaxItem);

@@ -80,6 +80,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 5;
+    display: flex;
 
     #navlogo {
 
@@ -91,12 +92,12 @@ nav {
 
     #navlinks {
         display: flex;
-        width: 100%;
+        width: 80%;
         min-height: 5rem;
         justify-content: flex-end;
         align-items: center;
         padding-right: 3rem;
-        position: fixed;
+        justify-self: flex-end;
         
         a {
           
@@ -109,7 +110,7 @@ nav {
                 border: none;
                 background-color: transparent;
                 padding: 0 1rem 0 1rem;
-
+                text-transform: none;
                 @extend %quick-transition;
             }
 
@@ -155,6 +156,7 @@ header {
         }
         img {
             margin-left: -1rem;
+            width: 15rem;
         }
     }
 }
@@ -268,4 +270,39 @@ noscript {
     position: relative;
     background-color: rgba(255, 255, 255, .7);
     padding: 2rem;
+}
+
+#screenshots {
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    img {
+        width: 50rem;
+        flex-grow: 1;
+    }
+}
+
+#pledgeButton {
+    background-color: $yellow;
+    border: none;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    transition: all .5s;
+    width: 12rem;
+}
+
+#pledgeButton:hover {
+    width: 13rem;
+    background-color: $light-blue;
+}
+.memberList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    p {
+        margin-right: 3rem;
+        margin-top: 3rem;
+    }
 }
