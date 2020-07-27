@@ -18,23 +18,23 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 new WOW().init();
 
 // Rellax Parallax
-const RELLAX = new Rellax('.rellax');
-const RELLAXONE = new Rellax('.rellax1', {
-    wrapper:".transition1",
-    relativeToWrapper: true
-});
-const RELLAXTWO = new Rellax('.rellax2', {
-    wrapper:".transition2",
-    relativeToWrapper: true
-});
-const RELLAXTHREE = new Rellax('.rellax3', {
-    wrapper:".transition3",
-    relativeToWrapper: true
-});
-const RELLAXFOUR = new Rellax('.rellax4', {
-    wrapper:".transition4",
-    relativeToWrapper: true
-});
+let rellaxArr = document.getElementsByClassName("parallax");
+let rellaxElems = [];
+
+for (let i = 0; i < rellaxArr.length; i++) {
+    let parallaxItem = "rellax"+i;
+    let wrapperClass = "wrapper"+i;
+    rellaxCont = {};
+    // Add classes to parallax elements & wrappers
+    rellaxArr[i].parentElement.classList.add(wrapperClass);
+    rellaxArr[i].classList.add(parallaxItem);
+    rellaxElems.push([parallaxItem,wrapperClass]);
+    // Create new rellax objects from parallax elements
+    window[rellaxElems[i][0]] = new Rellax(eval("\'." + rellaxElems[i][0] +"\'"), {
+        wrapper: eval("\'."+rellaxElems[i][1]+"\'"),
+        relativeToWrapper: true
+    });
+}
 
 // Equity Principles Logos
 const LOGOS = [
@@ -134,6 +134,7 @@ const LOGOS = [
     ['Zeno Group','https://dl.airtable.com/.attachments/5871d6416859891149b1503ac9b6585d/1ca6cb1b/0039.png'],
     ['Ziegler','https://dl.airtable.com/.attachments/26cb0a928265445211daa083da0f74e9/7aefa3a8/ziegler-logo.png']]
 
+// Generate <div> for each logo / company name if none
 const SPITLOGOS = (arr) => {
     arr.forEach(x => {
         x[1] ? document.getElementById('logos').innerHTML += ("<div class=\"EPlogo wow fadeInBottom\" data-wow-duration=\".35s\"><img src=\""+x[1]+"\" alt=\""+x[0]+" Logo\"></div>") 
