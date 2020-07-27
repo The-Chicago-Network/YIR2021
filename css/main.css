@@ -1,23 +1,33 @@
-#logos .EPlogo, #logos .EPname, nav #navlinks a button {
+nav #navlinks a button, #logos .EPlogo, #logos .EPname {
+  -webkit-transition: all;
   transition: all;
-  transition-duration: .5s;
-  transition-timing-function: ease;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
-.transition, header {
+header, .transition {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#welcome #chairHeadshots img {
-  clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+.hex {
+  -webkit-clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+          clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
 }
 
 body {
@@ -57,8 +67,12 @@ nav {
   min-height: 5rem;
   width: 100%;
   background-color: #cb96a3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0;
   z-index: 5;
@@ -70,11 +84,17 @@ nav #navlogo img {
 }
 
 nav #navlinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   min-height: 5rem;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 3rem;
   position: fixed;
 }
@@ -119,6 +139,8 @@ header {
 }
 
 #welcome #chairHeadshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -168,9 +190,16 @@ table td.color-bar {
 }
 
 #logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 #logos .EPlogo, #logos .EPname {
@@ -180,10 +209,17 @@ table td.color-bar {
   height: 7rem;
   margin: .5rem;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #logos .EPlogo img, #logos .EPname img {
@@ -192,7 +228,8 @@ table td.color-bar {
 }
 
 #logos .EPlogo:hover, #logos .EPname:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
 }
 
 .particles-js-canvas-el {
@@ -206,4 +243,20 @@ table td.color-bar {
 noscript p {
   font-size: 5rem;
   color: red;
+}
+
+.leftHex {
+  margin: -45rem 0rem 0rem -15rem;
+  position: relative;
+  z-index: 0;
+  -o-object-fit: fill;
+     object-fit: fill;
+  min-width: 50rem;
+}
+
+.overImage {
+  z-index: 1;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
 }
