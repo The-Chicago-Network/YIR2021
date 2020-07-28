@@ -1,33 +1,43 @@
-nav #navlinks a button, #logos .EPlogo, #logos .EPname {
-  -webkit-transition: all;
+#logos .EPlogo, #logos .EPname, nav #navlinks a button {
   transition: all;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: .5s;
+  transition-timing-function: ease;
 }
 
-header, .transition {
+.transition, header {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .hex {
-  -webkit-clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
-          clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+  clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+}
+
+#pledgeButton, #libraryButton {
+  background-color: #c8b638;
+  border: none;
+  padding: 1rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  transition: all .5s;
+  width: 12rem;
+}
+
+#pledgeButton:hover, #libraryButton:hover {
+  width: 13rem;
+  background-color: #48a7a7;
+}
+
+#technologyTransition, #programmingTransition, #membersTransition, #payingForwardTransition, #initiativesTransition {
+  filter: saturate(0.5);
 }
 
 body {
@@ -36,6 +46,60 @@ body {
   font-weight: 200;
   margin: 0 0 0 0;
   font-size: 1.25rem;
+  overflow-x: hidden;
+}
+
+.bigHex {
+  position: absolute;
+  object-fit: cover;
+  z-index: -5;
+  width: 40rem;
+  height: 40rem;
+}
+
+.leftHex {
+  margin-top: -40rem;
+  margin-left: -20rem;
+}
+
+.leftHex img {
+  max-height: 50rem;
+  margin-right: 100rem;
+}
+
+.rightHex {
+  margin-top: -45rem;
+  margin-left: 30rem;
+}
+
+.bottomHex {
+  margin-left: 10rem;
+}
+
+.flexColumn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#initiativesTransition {
+  background-image: url("/images/transfer/1 (1).JPG");
+}
+
+#payingForwardTransition {
+  background-image: url("/images/transfer/1 (2).JPG");
+}
+
+#membersTransition {
+  background-image: url("/images/Transfer/1 (5).JPG");
+}
+
+#programmingTransition {
+  background-image: url("/images/transfer/1 (8).JPG");
+}
+
+#technologyTransition {
+  background-image: url("/images/transfer/1 (7).JPG");
 }
 
 h1, h2 {
@@ -67,12 +131,8 @@ nav {
   min-height: 5rem;
   width: 100%;
   background-color: #cb96a3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   top: 0;
   z-index: 5;
@@ -85,17 +145,11 @@ nav #navlogo img {
 }
 
 nav #navlinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 80%;
   min-height: 5rem;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   padding-right: 3rem;
   justify-self: flex-end;
 }
@@ -121,6 +175,16 @@ header {
   z-index: 1;
 }
 
+#programs {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#programs div {
+  width: 15rem;
+  margin: 1rem;
+}
+
 .slide, .transition, header {
   min-height: 100vh;
   background-size: cover;
@@ -129,6 +193,10 @@ header {
 
 .slide h2, .transition h2, header h2 {
   font-size: 3rem;
+}
+
+.transition h2 {
+  font-size: 5rem;
 }
 
 .slide, .transition {
@@ -146,8 +214,6 @@ header {
 }
 
 #welcome #chairHeadshots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -158,6 +224,12 @@ header {
 #welcome #chairHeadshots img {
   margin-left: -1rem;
   width: 15rem;
+}
+
+#buildingBrave {
+  background-image: url("/images/dot-grid.png");
+  background-repeat: repeat;
+  background-size: 400px;
 }
 
 .transition {
@@ -198,16 +270,9 @@ table td.color-bar {
 }
 
 #logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 #logos .EPlogo, #logos .EPname {
@@ -217,17 +282,10 @@ table td.color-bar {
   height: 7rem;
   margin: .5rem;
   text-align: center;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #logos .EPlogo img, #logos .EPname img {
@@ -236,8 +294,7 @@ table td.color-bar {
 }
 
 #logos .EPlogo:hover, #logos .EPname:hover {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
 }
 
 .particles-js-canvas-el {
@@ -253,76 +310,37 @@ noscript p {
   color: red;
 }
 
-#futureLeaders {
-  max-width: 100vw;
-}
-
-.bigHex {
-  position: relative;
-  z-index: 0;
-  -o-object-fit: fill;
-     object-fit: fill;
-  width: 77vw;
-  margin-top: -45rem;
-  margin-left: -4.55rem;
-  margin-right: auto;
-}
-
 .overImage {
   z-index: 1;
   position: relative;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 2rem;
+  margin: auto;
 }
 
 #screenshots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 #screenshots img {
   width: 50rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 
-#pledgeButton {
-  background-color: #c8b638;
-  border: none;
-  padding: 1rem;
-  color: white;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  width: 12rem;
+#libraryButton {
+  width: 20rem;
 }
 
-#pledgeButton:hover {
-  width: 13rem;
-  background-color: #48a7a7;
+#libraryButton:hover {
+  width: 21rem;
 }
 
 .memberList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 .memberList p {
