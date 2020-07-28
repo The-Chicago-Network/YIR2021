@@ -235,7 +235,7 @@ header {
 }
 
 .slide, .transition {
-    padding: 20rem 10rem 20rem 10rem;
+    padding: 10rem 10rem 20rem 10rem;
 }
 
 .slideWrapper
@@ -259,13 +259,6 @@ header {
         }
     }
 }
-
-#buildingBrave {
-    background-image: url("/images/dot-grid.png");
-    background-repeat: repeat;
-    background-size: 400px;
-}
-
 .transition {
     background-image: linear-gradient(135deg,rgb(72,167,167) 0%,rgba(72,167,167,.6) 60%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%), url("http://unsplash.it/1440?random");
     @extend %parallax;
@@ -402,5 +395,16 @@ noscript {
 
 #memberListWrapper {
     background-color: $dark-dark-blue;
+    color: white;
+}
+
+#buildingBraveWrapper {
+    background-image: url("/images/dot-grid.png");
+    background-repeat: repeat;
+    background-size: 400px;
+}
+
+#equityWrapper {
+    background-color: $pink;
     color: white;
 }

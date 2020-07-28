@@ -200,7 +200,7 @@ header {
 }
 
 .slide, .transition {
-  padding: 20rem 10rem 20rem 10rem;
+  padding: 10rem 10rem 20rem 10rem;
 }
 
 .slideWrapper
@@ -225,12 +225,6 @@ header {
 #welcome #chairHeadshots img {
   margin-left: -1rem;
   width: 15rem;
-}
-
-#buildingBrave {
-  background-image: url("/images/dot-grid.png");
-  background-repeat: repeat;
-  background-size: 400px;
 }
 
 .transition {
@@ -352,5 +346,16 @@ noscript p {
 
 #memberListWrapper {
   background-color: #407989;
+  color: white;
+}
+
+#buildingBraveWrapper {
+  background-image: url("/images/dot-grid.png");
+  background-repeat: repeat;
+  background-size: 400px;
+}
+
+#equityWrapper {
+  background-color: #cb96a3;
   color: white;
 }
