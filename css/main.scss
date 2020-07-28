@@ -105,27 +105,27 @@ body {
 }
 
 #initiativesTransition {
-    background-image: url("/images/transfer/1.JPG");
+    background-image: url("images/transfer/1.JPG");
     @extend %filter;
 }
 
 #payingForwardTransition {
-    background-image: url("/images/transfer/2.JPG");
+    background-image: url("images/transfer/2.JPG");
     @extend %filter;
 }
 
 #membersTransition {
-    background-image: url("/images/Transfer/5.JPG");
+    background-image: url("images/Transfer/5.JPG");
     @extend %filter;
 }
 
 #programmingTransition {
-    background-image: url("/images/transfer/8.JPG");
+    background-image: url("images/transfer/8.JPG");
     @extend %filter;
 }
 
 #technologyTransition {
-    background-image: url("/images/transfer/7.JPG");
+    background-image: url("images/transfer/7.JPG");
     @extend %filter;
 }
 
