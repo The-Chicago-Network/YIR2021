@@ -199,11 +199,14 @@ header {
   font-size: 5rem;
 }
 
-.slide, .transition {
+.slide {
   padding: 10rem 10rem 20rem 10rem;
 }
 
-.slideWrapper
+.transition {
+  padding: 20rem 10rem 20rem 10rem;
+}
+
 .slide {
   max-width: 50rem;
   margin: auto;
@@ -344,15 +347,39 @@ noscript p {
   font-size: .8rem;
 }
 
+.quote {
+  font-size: 19rem;
+  margin-top: -4rem;
+  font-family: sans-serif;
+}
+
+.quote1 {
+  margin-right: 1rem;
+}
+
+.quote2 {
+  align-self: flex-end;
+}
+
+.quoteContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  font-size: 2rem;
+}
+
+blockquote {
+  margin: 0;
+}
+
 #memberListWrapper {
   background-color: #407989;
   color: white;
 }
 
 #buildingBraveWrapper {
-  background-image: url("/images/dot-grid.png");
-  background-repeat: repeat;
-  background-size: 400px;
+  background-color: #58595b;
+  color: white;
 }
 
 #equityWrapper {

@@ -94,6 +94,7 @@ const LOGOS = [
     ['Kellogg Company','https://dl.airtable.com/.attachments/245b64ce60af900e8a8af9c0384eb43a/a24c3c47/0007.png'],
     ['Koya Leadership Partners','https://dl.airtable.com/.attachments/1a5f21340703c441bf34123bc05a160d/9ab59a1d/0021.png'],
     ['KPMG','https://dl.airtable.com/.attachments/4031d4f74ab5d96bc564bf98ee61ec87/204d4c46/KPMG.jpg'],
+    ['Latino Policy Forum','https://dl.airtable.com/.attachments/68cb1112fb018c01fa918a0994c97a01/dd1e75f6/LPFLogo.JPG'],
     ['LEAP Innovations','https://dl.airtable.com/.attachments/4687d9836544bddab2e93b18f469c188/519ca3cf/0064.png'],
     ['Lincoln Park Zoo ','https://dl.airtable.com/.attachments/05e6be664e1a185c3838ec206ed2861c/68329858/LincolnParkZoo.png'],
     ['Lurie Children\'s Hospital','https://dl.airtable.com/.attachments/804e23ac1105ec67a2def470d0973bc5/f6fa131e/Lurielogo.jpg'],
