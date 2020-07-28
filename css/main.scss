@@ -238,8 +238,10 @@ header {
     padding: 20rem 10rem 20rem 10rem;
 }
 
+.slideWrapper
+
 .slide {
-    max-width: 60rem;
+    max-width: 50rem;
     margin: auto;
 }
 
@@ -392,5 +394,13 @@ noscript {
     p {
         margin-right: 3rem;
         margin-top: 3rem;
+        font-size: .8rem;
     }
+}
+
+// Slide Wrappers
+
+#memberListWrapper {
+    background-color: $dark-dark-blue;
+    color: white;
 }
