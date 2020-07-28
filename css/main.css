@@ -372,6 +372,12 @@ blockquote {
   margin: 0;
 }
 
+#stem img {
+  max-width: 40rem;
+  margin-bottom: -10rem;
+  margin-left: -10rem;
+}
+
 #memberListWrapper {
   background-color: #407989;
   color: white;
@@ -384,5 +390,10 @@ blockquote {
 
 #equityWrapper {
   background-color: #cb96a3;
+  color: white;
+}
+
+#execWrapper {
+  background-color: #c8b638;
   color: white;
 }
