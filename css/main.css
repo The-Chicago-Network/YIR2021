@@ -83,23 +83,23 @@ body {
 }
 
 #initiativesTransition {
-  background-image: url("/images/transfer/1 (1).JPG");
+  background-image: url("/images/transfer/1.JPG");
 }
 
 #payingForwardTransition {
-  background-image: url("/images/transfer/1 (2).JPG");
+  background-image: url("/images/transfer/2.JPG");
 }
 
 #membersTransition {
-  background-image: url("/images/Transfer/1 (5).JPG");
+  background-image: url("/images/Transfer/5.JPG");
 }
 
 #programmingTransition {
-  background-image: url("/images/transfer/1 (8).JPG");
+  background-image: url("/images/transfer/8.JPG");
 }
 
 #technologyTransition {
-  background-image: url("/images/transfer/1 (7).JPG");
+  background-image: url("/images/transfer/7.JPG");
 }
 
 h1, h2 {
