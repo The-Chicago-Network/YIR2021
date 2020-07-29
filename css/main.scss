@@ -82,6 +82,10 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
     clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
 }
 
+article {
+    width: 100vw;
+}
+
 %button {
     background-color: $yellow;
     border: none;
@@ -102,14 +106,18 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
     filter: saturate(.5);
 }
 
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: $font-stack;
     color: $gray;
     font-weight: $weight-light;
-    margin: 0 0 0 0;
     font-size: 1.25rem;
-    overflow-x: hidden;
 }
 
 .hex {
@@ -204,7 +212,7 @@ h1 {
 
 nav {
     min-height: 5rem;
-    width: 100%;
+    width: 100vw;
     background-color: $pink;
     display: flex;
     align-items: center;

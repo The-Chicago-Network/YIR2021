@@ -76,6 +76,10 @@ header {
   clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
 }
 
+article {
+  width: 100vw;
+}
+
 #pledgeButton, #libraryButton {
   background-color: #c8b638;
   border: none;
@@ -96,13 +100,18 @@ header {
   filter: saturate(0.5);
 }
 
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: din-2014, sans-serif;
   color: #58595b;
   font-weight: 200;
-  margin: 0 0 0 0;
   font-size: 1.25rem;
-  overflow-x: hidden;
 }
 
 .bigHex {
@@ -189,7 +198,7 @@ h1 #h1sub {
 
 nav {
   min-height: 5rem;
-  width: 100%;
+  width: 100vw;
   background-color: #cb96a3;
   display: flex;
   align-items: center;
