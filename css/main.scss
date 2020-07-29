@@ -15,6 +15,50 @@ $gray: #58595b;                 //rgb(88,89,91)
 $pink: #cb96a3;                 //rgb(203,150,163)
 $dark-pink: #ad96a4;            //rgb(173,150,164)
 
+.light-blue {
+    color: $light-blue;
+} 
+.dark-blue {
+    color: $dark-blue;
+} 
+.yellow {
+    color: $yellow;
+} 
+.dark-dark-blue {
+    color: $dark-dark-blue;
+} 
+.gray {
+    color: $gray;
+} 
+.pink {
+    color: $pink;
+} 
+.dark-pink {
+    color: $dark-pink;
+} 
+
+.bg-light-blue {
+    background-color: $light-blue;
+} 
+.bg-dark-blue {
+    background-color: $dark-blue;
+} 
+.bg-yellow {
+    background-color: $yellow;
+} 
+.bg-dark-dark-blue {
+    background-color: $dark-dark-blue;
+} 
+.bg-gray {
+    background-color: $gray;
+} 
+.bg-pink {
+    background-color: $pink;
+} 
+.bg-dark-pink {
+    background-color: $dark-pink;
+} 
+
 //Extend
 %quick-transition {
     transition: all;
@@ -129,6 +173,9 @@ body {
     @extend %filter;
 }
 
+.EPname p {
+    color: $gray;
+}
 
 h1, h2 {
     font-weight: $weight-light;
@@ -230,21 +277,70 @@ header {
     }
 }
 
-.transition h2 {
-    font-size: 5rem;
-}
-
 .slide {
     padding: 10rem 10rem 10rem 10rem;
+    max-width: 50rem;
+    margin: auto;
 }
 
 .transition {
     padding: 20rem 10rem 20rem 10rem;
+    h2 {
+        font-size: 5rem;
+    }
 }
 
-.slide {
-    max-width: 50rem;
-    margin: auto;
+.statsWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .statWrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        max-width: 20rem;
+        margin: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 5rem;
+        span {
+            font-size: 7rem;
+            margin-right: 1rem;
+            margin-left: 2rem;
+        }
+    }
+}
+
+.statWrapper:nth-child(1), .statWrapper:nth-child(2) {
+    max-width: 25rem;
+    p {
+        font-size: .85rem;
+    }
+}
+
+#bysector {
+    max-width: 100vw;
+    h2 {
+        text-align: center;
+    }
+}
+
+.statHex {
+    color: white;
+    font-size: 1rem;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    p {
+        width: 10rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin: auto;
+    }
 }
 
 #welcome {
@@ -445,5 +541,10 @@ blockquote {
 
 #execWrapper {
     background-color: $yellow;
+    color: white;
+}
+
+#resourceWrapper {
+    background-color: $dark-pink;
     color: white;
 }

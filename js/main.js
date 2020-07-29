@@ -134,7 +134,7 @@ const LOGOS = [
     ['Zeno Group','https://dl.airtable.com/.attachments/5871d6416859891149b1503ac9b6585d/1ca6cb1b/0039.png'],
     ['Ziegler','https://dl.airtable.com/.attachments/26cb0a928265445211daa083da0f74e9/7aefa3a8/ziegler-logo.png']]
 
-// Generate <div> for each logo / company name if none
+// Generate <div> for each logo / company name
 const SPITLOGOS = (arr) => {
     arr.forEach(x => {
         x[1] ? document.getElementById('logos').innerHTML += ("<div class=\"EPlogo wow fadeInBottom\" data-wow-duration=\".35s\"><img src=\""+x[1]+"\" alt=\""+x[0]+" Logo\"></div>") 
@@ -143,3 +143,21 @@ const SPITLOGOS = (arr) => {
 }
 
 SPITLOGOS(LOGOS);
+
+// Apply colors to stats
+const STATCOLORS = () => {
+    let elements = document.getElementsByClassName("stat");
+    let hexes = document.getElementsByClassName("statHex");
+    let textColors = ["light-blue", "dark-blue", "yellow", "dark-dark-blue", "gray", "pink", "dark-pink"];
+    let hexColors = ["bg-light-blue", "bg-dark-blue", "bg-yellow", "bg-dark-dark-blue", "bg-gray", "bg-pink", "bg-dark-pink"];
+    let colorIndex = 0;
+    for (let i=0; i<elements.length; i++) {
+        currentTextColor = textColors[colorIndex];
+        currentHexColor = hexColors[colorIndex];
+        elements[i].classList.add(currentTextColor);
+        hexes[i].classList.add(currentHexColor);
+        colorIndex === 6 ? colorIndex = 0 : colorIndex++
+    }
+}
+
+STATCOLORS();
