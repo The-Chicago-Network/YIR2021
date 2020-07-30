@@ -412,6 +412,13 @@ header {
         margin: auto;
     }
 }
+.bbButton {
+    @extend: %button;
+}
+
+.bbButton:hover {
+    @extend: %button-transition;
+}
 
 #welcome {
     background-color: $light-blue;

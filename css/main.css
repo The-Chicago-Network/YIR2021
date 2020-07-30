@@ -54,7 +54,7 @@
   background-color: #ad96a4;
 }
 
-#logos .EPlogo, #logos .EPname, nav #navlinks a button {
+#logos .EPlogo, #logos .EPname, button {
   transition: all;
   transition-duration: .5s;
   transition-timing-function: ease;
@@ -246,19 +246,19 @@ nav #navlinks {
   justify-self: flex-end;
 }
 
-nav #navlinks a button {
+button {
   color: white;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
-  min-height: 5rem;
+  min-height: 2rem;
   border: none;
   background-color: transparent;
   padding: 0 1rem 0 1rem;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
-nav #navlinks a button:hover {
+button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
