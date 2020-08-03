@@ -413,11 +413,11 @@ header {
     }
 }
 .bbButton {
-    @extend: %button;
+    @extend %button;
 }
 
 .bbButton:hover {
-    @extend: %button-transition;
+    @extend %button-transition;
 }
 
 #welcome {
@@ -604,3 +604,88 @@ blockquote {
     background-color: $dark-pink;
     color: white;
 }
+
+.socialPosts {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 60rem;
+    iframe {
+        width: 20rem;
+        flex-shrink: 1;
+    }
+}
+
+#instagram-embed-0 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-1 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-2 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-3 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-4 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-5 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-6 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-7 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+#instagram-embed-8 {
+    width: 15rem;
+    min-width: 10rem !important;
+    
+}
+
+#resourceWrapper .hex {
+    width: 50rem;
+    height: 50rem;
+    background-position: right top;
+    background-image: url("../images/christin-hume-Hcfwew744z4-unsplash.jpg");
+    background-size: 75rem;
+    margin-bottom: -35rem;
+    position: relative;
+    z-index: 0;
+}
+
+#resourceWrapper .slide {
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width: 1245px) {
+    .statWrapper:nth-child(odd) {
+        margin-top: +10rem;
+    }
+    .statWrapper:nth-child(even) {
+        margin-top: -10rem;
+    }
+    .statWrapper:nth-child(16) {
+        margin-top: 5rem;
+    }
+}
+
