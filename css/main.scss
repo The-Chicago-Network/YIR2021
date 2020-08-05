@@ -197,6 +197,7 @@ body {
 #programmingTransition {
     background-image: url("../images/Transfer/8.JPG");
     @extend %filter;
+    background: blue;
 }
 
 #technologyTransition {
