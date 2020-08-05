@@ -97,7 +97,7 @@ article {
 }
 
 #technologyTransition, #programmingTransition, #membersTransition, #payingForwardTransition, #initiativesTransition {
-  filter: saturate(0.5);
+  filter: saturate(1);
 }
 
 html, body {
@@ -172,7 +172,7 @@ body {
 }
 
 #initiativesTransition {
-  background-image: url("../images/Transfer/1.JPG");
+  background-image: url("../images/Transfer/11.JPG");
 }
 
 #payingForwardTransition {
@@ -188,7 +188,7 @@ body {
 }
 
 #technologyTransition {
-  background-image: url("../images/Transfer/7.JPG");
+  background-image: url("../images/Transfer/12.JPG");
 }
 
 .EPname p {
@@ -400,6 +400,15 @@ header {
   margin: auto;
 }
 
+.bbButton {
+  margin-top: 2rem;
+  width: 20rem;
+}
+
+.bbButton:hover {
+  width: 22rem;
+}
+
 #welcome {
   background-color: #48a7a7;
   color: white;
@@ -507,12 +516,12 @@ noscript p {
 #screenshots {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #screenshots img {
-  width: 50rem;
-  flex-grow: 1;
+  width: 20rem;
+  margin: 1rem;
 }
 
 #libraryButton {
@@ -640,6 +649,15 @@ blockquote {
 #resourceWrapper .slide {
   position: relative;
   z-index: 1;
+}
+
+.mugshot {
+  width: 5rem;
+  height: 5rem;
+}
+
+.mugshot img {
+  width: 5rem;
 }
 
 @media screen and (min-width: 1245px) {
