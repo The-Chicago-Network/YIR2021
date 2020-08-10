@@ -608,6 +608,11 @@ blockquote {
     color: white;
 }
 
+#annualWrapper {
+    background-color: $dark-blue;
+    color: white;
+}
+
 .socialPosts {
     display: flex;
     flex-flow: row wrap;
@@ -681,11 +686,31 @@ blockquote {
 }
 
 .mugshot {
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
     img {
-        width: 5rem;
+        width: 10rem;
     }
+}
+
+.staffList {
+    display: flex; 
+    flex-flow: row wrap;
+    font-size: .8rem;
+    justify-content: space-between;
+    .staffContainer {
+        width: 10rem;
+        margin: 1rem;
+    }
+}
+
+#programs > div:before {
+    content: "";
+    background-color: $yellow;
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin-bottom: -7rem;
 }
 
 @media screen and (min-width: 1245px) {
