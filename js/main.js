@@ -144,20 +144,22 @@ const SPITLOGOS = (arr) => {
 
 SPITLOGOS(LOGOS);
 
-// Apply colors to stats
-const STATCOLORS = () => {
-    let elements = document.getElementsByClassName("stat");
-    let hexes = document.getElementsByClassName("statHex");
-    let textColors = ["light-blue", "dark-blue", "yellow", "dark-dark-blue", "gray", "pink", "dark-pink"];
-    let hexColors = ["bg-light-blue", "bg-dark-blue", "bg-yellow", "bg-dark-dark-blue", "bg-gray", "bg-pink", "bg-dark-pink"];
-    let colorIndex = 0;
+let textColors = ["light-blue", "dark-blue", "yellow", "dark-dark-blue", "gray", "pink", "dark-pink"];
+let bgColors = ["bg-light-blue", "bg-dark-blue", "bg-yellow", "bg-dark-dark-blue", "bg-gray", "bg-pink", "bg-dark-pink"];
+let eventColors = ["bg-light-blue", "bg-dark-blue", "bg-yellow", "bg-dark-dark-blue", "bg-gray", "bg-pink"];
+
+// Applies one class from classArr to all elements with targetClassName, in order, 
+// repeating until each element with targetClassName have been assigned a class.
+const APPLYCLASS = (targetClassName, classArr) => {
+    let elements = document.getElementsByClassName(targetClassName);
+    let arrIndex = 0;
     for (let i=0; i<elements.length; i++) {
-        currentTextColor = textColors[colorIndex];
-        currentHexColor = hexColors[colorIndex];
-        elements[i].classList.add(currentTextColor);
-        hexes[i].classList.add(currentHexColor);
-        colorIndex === 6 ? colorIndex = 0 : colorIndex++
+        let index = classArr[arrIndex];
+        elements[i].classList.add(index);
+        arrIndex === classArr.length - 1 ? arrIndex = 0 : arrIndex++
     }
 }
 
-STATCOLORS();
+APPLYCLASS("stat", textColors);
+APPLYCLASS("statHex", bgColors);
+APPLYCLASS("eventHex", eventColors)

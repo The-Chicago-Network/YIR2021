@@ -293,10 +293,27 @@ header {
 #programs {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
     div {
         width: 15rem;
-        margin: 1rem;
+        position: relative;
     }
+}
+
+div #covidProgramming.slide {
+    max-width: 100vw;
+}
+
+.covidheader {
+    max-width: 60rem;
+    text-align: center;
+    margin: auto;
+}
+
+.event {
+    margin: 3rem;
 }
 
 .quoteContainer {
@@ -389,7 +406,7 @@ header {
     }
 }
 
-#bysector {
+#bysector, #covidProgramming {
     max-width: 100vw;
     h2 {
         text-align: center;
@@ -581,6 +598,24 @@ blockquote {
     }
 }
 
+.speaker { 
+    width: 10rem;
+    height: 10rem;
+    img {
+        width: 10rem;
+    }
+}
+
+.speakers {
+    display: flex;
+    flex-flow: row wrap;
+    .speakerContainer {
+        width: 10rem;
+        margin: 1rem;
+        font-size: 1rem;
+    }
+}
+
 // Slide Wrappers
 
 #memberListWrapper {
@@ -704,13 +739,53 @@ blockquote {
     }
 }
 
-#programs > div:before {
-    content: "";
-    background-color: $yellow;
-    width: 7rem;
-    height: 7rem;
-    display: block;
+.darken {
+    text-shadow: 2px 2px 5px black;
+}
+
+#execWrapper {
+    .hex {
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        z-index: 0;
+        img {
+            height: 30rem;
+        }
+    }
+    .hex.exec1 {
+        margin-bottom: -30rem;
+    }
+    .hex.exec2 {
+        right: 0;
+        margin-top: -30rem;
+        margin-left: 45rem; 
+    }
+}
+
+.slideContentWrapper {
+    position: relative;
+    z-index: 1;
+}
+
+#execclub {
+    position: relative;
+}
+
+#covidWrapper {
+    background-color: $dark-pink;
+    color: white;
+}
+
+#programs .eventHex {
+    width: 10rem;
+    height: 10rem;
+    max-width: 10rem;
+    max-height: 10rem;
     margin-bottom: -7rem;
+    margin-left: -2rem;
+    position: relative;
+    z-index: 0;
 }
 
 @media screen and (min-width: 1245px) {
