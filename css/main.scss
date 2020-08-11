@@ -753,6 +753,9 @@ blockquote {
     .staffContainer {
         width: 10rem;
         margin: 1rem;
+        a {
+            color: $light-blue;
+        }
     }
 }
 
@@ -805,6 +808,7 @@ blockquote {
     z-index: 0;
 }
 
+
 @media screen and (min-width: 1245px) {
     .statWrapper:nth-child(odd) {
         margin-top: +10rem;
@@ -814,6 +818,10 @@ blockquote {
     }
     .statWrapper:nth-child(16) {
         margin-top: 5rem;
+    }
+
+    nav {
+        display: none;
     }
 }
 

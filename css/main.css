@@ -731,6 +731,10 @@ blockquote {
   margin: 1rem;
 }
 
+.staffList .staffContainer a {
+  color: #48a7a7;
+}
+
 .darken {
   text-shadow: 2px 2px 5px black;
 }
@@ -790,5 +794,8 @@ blockquote {
   }
   .statWrapper:nth-child(16) {
     margin-top: 5rem;
+  }
+  nav {
+    display: none;
   }
 }
