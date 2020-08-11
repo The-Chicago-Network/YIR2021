@@ -808,6 +808,9 @@ blockquote {
     z-index: 0;
 }
 
+.hide {
+    display: none !important;
+}
 
 @media screen and (min-width: 1245px) {
     .statWrapper:nth-child(odd) {
@@ -818,11 +821,5 @@ blockquote {
     }
     .statWrapper:nth-child(16) {
         margin-top: 5rem;
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    nav {
-        display: none;
     }
 }

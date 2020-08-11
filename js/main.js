@@ -184,4 +184,6 @@ if (window.mobileCheck) {
     SEEKANDREMOVE("fadeInTop");
     SEEKANDREMOVE("fadeInLeft");
     SEEKANDREMOVE("fadeInRight");
+    let nav = getElementByTagName("nav");
+    nav.classList.add("hide");
 }
