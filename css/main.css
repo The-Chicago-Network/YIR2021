@@ -591,6 +591,23 @@ blockquote {
   font-size: 1rem;
 }
 
+.annualimage {
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+.annualEvent1 {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.annualcont {
+  position: relative;
+  z-index: 3;
+}
+
 #memberListWrapper {
   background-color: #407989;
   color: white;
