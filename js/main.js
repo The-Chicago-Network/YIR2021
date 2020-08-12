@@ -25,7 +25,7 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 
 
 // If browser user agent != mobile, initiate animate on scroll
-if (window.mobileCheck === true) {
+if (window.matchMedia("(max-width: 900px)").matches) {
     console.log("Animate on scroll disabled");
 } else {
     new WOW().init(); 
