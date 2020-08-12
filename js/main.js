@@ -25,13 +25,13 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 
 
 // If browser user agent != mobile, initiate animate on scroll
-if (window.matchMedia("(max-width: 900px)").matches) {
+if (Window.matchMedia("(max-width: 900px)").matches) {
     console.log("Animate on scroll disabled");
+    getElementByTagName("nav").classList.add("hide");
+    alert("hello");
 } else {
     new WOW().init(); 
     console.log("Animate on Scroll enabled");
-    let nav = getElementByTagName("nav");
-    nav.classList.add("hide");
 }
 
 // Rellax Parallax

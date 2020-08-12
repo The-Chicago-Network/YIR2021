@@ -823,3 +823,9 @@ blockquote {
         margin-top: 5rem;
     }
 }
+
+@media screen and (max-width: 900px) {
+    nav {
+        display: none;
+    }
+}
