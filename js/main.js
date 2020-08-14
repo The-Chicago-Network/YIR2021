@@ -33,10 +33,17 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
 
+//Adds .hide to classes in array
+const KILLCLASS = (classArr) => {
+    classArr.forEach(x => document.getElementsByClassName(x)[0].classList.add("hide"))
+}
+
 // If browser user agent != mobile, initiate animations
 if (isMobile()) {
     console.log("Animate on scroll disabled");
     document.getElementsByTagName("nav")[0].classList.add("hide");
+    let hideClasses = ["leftHex", "rightHex", "bottomHex", "exec2"];
+    KILLCLASS(hideClasses);
 } else {
     //Initiates animate on scroll
     new WOW().init(); 
