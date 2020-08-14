@@ -79,7 +79,7 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
 }
 
 %clip-hexagon {
-    clip-path: polygon(51% 0, 90% 25%, 90% 74%, 52% 100%, 9% 75%, 9% 25%);
+    clip-path: polygon(50% 0, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
 }
 
 article {
@@ -441,8 +441,25 @@ div #covidProgramming.slide {
 }
 
 #welcome {
-    background-color: $light-blue;
     color: white;
+    .slideWrapper:nth-child(1) {
+        background-color: $light-blue;
+    }
+    .slideWrapper:nth-child(2) {
+        background-color: $gray;
+    }
+    .slideWrapper {
+        img {
+            margin-left: -1rem;
+            width: 15rem; 
+            height: 15rem;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    .CEOSpiel:nth-child(2) {
+        margin-top: 10rem;
+    }
     #chairHeadshots {
         display: flex;
         div {
@@ -454,6 +471,8 @@ div #covidProgramming.slide {
         }
     }
 }
+
+
 .transition {
     background-image: linear-gradient(135deg,rgb(72,167,167) 0%,rgba(72,167,167,.6) 60%,rgba(0,0,0,0) 60%,rgba(255,255,255,0) 100%), url("http://unsplash.it/1440?random");
     @extend %parallax;

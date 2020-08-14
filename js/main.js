@@ -22,9 +22,9 @@ const uaDataIsMobile = window.navigator.userAgentData?.mobile
 // Mobile browser check with legacy fallback
 const isMobile = () => {
     if (typeof uaDataIsMobile === 'boolean') {
-        return uaDataIsMobile
+        return uaDataIsMobile;
     } else {
-        return window.mobileCheck()
+        return window.mobileCheck();
     }
 }
 
