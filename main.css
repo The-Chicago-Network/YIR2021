@@ -139,6 +139,19 @@ body {
   width: 100vw;
 }
 
+.cateShow {
+  position: fixed;
+  margin-right: 2rem;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  max-height: 10rem;
+}
+
+.cate {
+  display: none;
+}
+
 .bigHex {
   position: absolute;
   -o-object-fit: cover;

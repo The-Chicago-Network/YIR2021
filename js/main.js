@@ -32,6 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
         //Initiates animate on scroll
         new WOW().init(); 
         console.log("Animate on Scroll enabled");
+
+        //Shhhhh
+        document.onkeydown = keydown; 
+        function keydown (evt) { 
+            if (!evt) evt = event; 
+            if (evt.ctrlKey && evt.altKey && evt.keyCode === 87) {
+                if (document.getElementsByClassName("cateShow").length == 0) {
+                    document.getElementsByClassName("cate")[0].classList.add("cateShow");
+                    document.getElementsByClassName("cate")[0].classList.remove("cate");
+                    let audio = new Audio('/audio/Cat mewing and meowing.mp3');
+                    audio.play();
+                } else {
+                    document.getElementsByClassName("cateShow")[0].classList.add("cate");
+                    document.getElementsByClassName("cateShow")[0].classList.remove("cateShow");
+                }
+            }
+        }
+
         // Allocates parent of each rellax element as a wrapper  & creates
         // new rellax object for each to avoid huge position offsets 
         // due to rellax element scroll speed settings ⊙.☉
