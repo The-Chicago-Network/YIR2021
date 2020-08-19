@@ -17,26 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return check;
     };
 
-    // Modern mobile browser check
-    const uaDataIsMobile = window.navigator.userAgentData?.mobile;
-
-    // Mobile browser check with legacy fallback
-    const isMobile = () => {
-        if (typeof uaDataIsMobile === 'boolean') {
-            return uaDataIsMobile;
-        } else {
-            return window.mobileCheck();
-        }
-    }
-
-
     //Adds .hide to classes in array
     const KILLCLASS = (classArr) => {
         classArr.forEach(x => document.getElementsByClassName(x)[0].classList.add("hide"))
     }
 
     // If browser user agent != mobile, initiate animations
-    if (isMobile()) {
+    if (window.mobileCheck()) {
         console.log("Animate on scroll disabled");
         document.getElementsByTagName("nav")[0].classList.add("hide");
         let hideClasses = ["leftHex", "rightHex", "bottomHex", "exec2"];

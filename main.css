@@ -54,26 +54,36 @@
   background-color: #ad96a4;
 }
 
-#logos .EPlogo, #logos .EPname, nav #navlinks a button {
+nav #navlinks a button, #logos .EPlogo, #logos .EPname {
+  -webkit-transition: all;
   transition: all;
-  transition-duration: .5s;
-  transition-timing-function: ease;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
-.transition, header {
+header, .transition {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hex {
-  clip-path: polygon(50% 0, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+  -webkit-clip-path: polygon(50% 0, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+          clip-path: polygon(50% 0, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
 }
 
 article {
@@ -92,24 +102,26 @@ section {
   overflow-x: hidden;
 }
 
-#pledgeButton, #libraryButton, .bbButton {
+.bbButton, #pledgeButton, #libraryButton {
   background-color: #c8b638;
   border: none;
   padding: 1rem;
   color: white;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  -webkit-transition: all .5s;
   transition: all .5s;
   width: 12rem;
 }
 
-#pledgeButton:hover, #libraryButton:hover, .bbButton:hover {
+.bbButton:hover, #pledgeButton:hover, #libraryButton:hover {
   width: 13rem;
   background-color: #48a7a7;
 }
 
-#technologyTransition, #programmingTransition, #membersTransition, #payingForwardTransition, #initiativesTransition {
-  filter: saturate(1);
+#initiativesTransition, #payingForwardTransition, #membersTransition, #programmingTransition, #technologyTransition {
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
 }
 
 html, body {
@@ -129,7 +141,8 @@ body {
 
 .bigHex {
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -5;
   width: 40rem;
   height: 40rem;
@@ -159,16 +172,32 @@ body {
 }
 
 .flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .flexRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #FLlogos {
@@ -236,8 +265,12 @@ nav {
   min-height: 5rem;
   width: 100vw;
   background-color: #cb96a3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0;
   z-index: 5;
@@ -250,11 +283,17 @@ nav #navlogo img {
 }
 
 nav #navlinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   min-height: 5rem;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 3rem;
   justify-self: flex-end;
 }
@@ -281,8 +320,13 @@ header {
 }
 
 #programs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 100%;
   padding-left: 10rem;
   padding-right: 10rem;
@@ -308,9 +352,16 @@ div #covidProgramming.slide {
 }
 
 .quoteContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 1.5rem;
   background-color: #48a7a7;
   border-radius: 2rem;
@@ -327,8 +378,11 @@ div #covidProgramming.slide {
 .quoteContainer .hex {
   height: 19rem;
   width: 19rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   margin-left: -10rem;
 }
 
@@ -374,19 +428,36 @@ div #covidProgramming.slide {
 }
 
 .statsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .statsWrapper .statWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   max-width: 20rem;
   margin: 2rem;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   margin-bottom: 5rem;
 }
 
@@ -417,10 +488,15 @@ div #covidProgramming.slide {
   font-size: 1rem;
   height: 10rem;
   width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .statHex p {
@@ -455,8 +531,10 @@ div #covidProgramming.slide {
   margin-left: -1rem;
   width: 15rem;
   height: 15rem;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 #welcome .CEOSpiel:nth-child(2) {
@@ -464,6 +542,8 @@ div #covidProgramming.slide {
 }
 
 #welcome #chairHeadshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -514,9 +594,16 @@ table td.color-bar {
 }
 
 #logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 #logos .EPlogo, #logos .EPname {
@@ -526,10 +613,17 @@ table td.color-bar {
   height: 7rem;
   margin: .5rem;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #logos .EPlogo img, #logos .EPname img {
@@ -538,7 +632,8 @@ table td.color-bar {
 }
 
 #logos .EPlogo:hover, #logos .EPname:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55);
 }
 
 .particles-js-canvas-el {
@@ -563,10 +658,19 @@ noscript p {
 }
 
 #screenshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #screenshots img {
@@ -583,9 +687,16 @@ noscript p {
 }
 
 .memberList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .memberList p {
@@ -614,8 +725,13 @@ blockquote {
 }
 
 .speakers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .speakers .speakerContainer {
@@ -628,10 +744,13 @@ blockquote {
   width: 20rem;
   height: 20rem;
   margin: 1rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .annualEvent1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 5rem;
 }
@@ -672,14 +791,20 @@ blockquote {
 }
 
 .socialPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   max-width: 60rem;
 }
 
 .socialPosts iframe {
   width: 20rem;
-  flex-shrink: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 #instagram-embed-0 {
@@ -753,10 +878,17 @@ blockquote {
 }
 
 .staffList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   font-size: .8rem;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .staffList .staffContainer {
@@ -833,3 +965,4 @@ blockquote {
     margin-top: 5rem;
   }
 }
+/*# sourceMappingURL=main.css.map */

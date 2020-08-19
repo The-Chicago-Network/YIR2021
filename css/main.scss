@@ -585,6 +585,7 @@ noscript {
     display: flex; 
     flex-flow: row nowrap;
     justify-content: center;
+    align-items: flex-start;
     img {
         width: 20rem;
         margin: 1rem;
