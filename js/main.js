@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (document.getElementsByClassName("cateShow").length == 0) {
                     document.getElementsByClassName("cate")[0].classList.add("cateShow");
                     document.getElementsByClassName("cate")[0].classList.remove("cate");
-                    let audio = new Audio('audio/Cat mewing and meowing.mp3');
+                    let audio = new Audio('../audio/meow.mp3');
                     audio.play();
                 } else {
                     document.getElementsByClassName("cateShow")[0].classList.add("cate");
