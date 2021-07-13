@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         * Animate on scroll: WOW.js https://github.com/graingert/wow
         * CSS Animations: Vivify (https://github.com/Martz90/vivify)
         * Built with SCSS
+        * Desktop users: try pressing Ctrl + Alt + W
     `)
 
     // Legacy mobile browser check
