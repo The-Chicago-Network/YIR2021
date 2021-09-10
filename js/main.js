@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("%c✨ LOVINGLY HANDCRAFTED BY NATHAN U ✨", "font-size: 1.5em; font-weight: 800; background: linear-gradient(to right,  #91ebff 0%,#a1ffe9 11%,#b3ff99 23%,#e4ffa1 36%,#ffd3a1 49%,#ffbda1 62%,#ff9fc7 75%,#b5a1ff 88%,#79e0ff 100%); color: rgb(64,64,64); border-radius: 1em; padding: .5em .5em .5em .5em;");
+    console.log("%c✨ LOVINGLY HANDCRAFTED BY NATHAN UPCHURCH ✨", "font-size: 1.5em; font-weight: 800; background: linear-gradient(to right,  #91ebff 0%,#a1ffe9 11%,#b3ff99 23%,#e4ffa1 36%,#ffd3a1 49%,#ffbda1 62%,#ff9fc7 75%,#b5a1ff 88%,#79e0ff 100%); color: rgb(64,64,64); border-radius: 1em; padding: .5em .5em .5em .5em;");
     console.log(`
         * Page by Nathan Upchurch of Kom Creative (https://komcreative.com)
         * Typeface: Din 2014, by Vasily Biryukov of Paratype (https://www.paratype.com/)
         * Particles: particles.js (https://github.com/VincentGarreau/particles.js/)
         * Parallax: Rellax.js (https://github.com/dixonandmoe/rellax)
         * Animate on scroll: WOW.js https://github.com/graingert/wow
-        * CSS Animations: Vivify (https://github.com/Martz90/vivify)
+        * CSS Animations: Animista (https://animista.net/)
         * Built with SCSS
         * Desktop users: try pressing Ctrl + Alt + W
     `)
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generates a <div> for each logo / company name in a 2d array: [['name', 'logoURL']]
     const SPITLOGOS = (arr) => {
         arr.forEach(x => {
-            x[1] ? document.getElementById('logos').innerHTML += ("<div class=\"EPlogo wow fadeInBottom\" data-wow-duration=\".35s\"><img src=\""+x[1]+"\" alt=\""+x[0]+" Logo\"></div>") 
+            x[1] ? document.getElementById('logos').innerHTML += ("<div class=\"EPlogo wow fadeInBottom\" data-wow-duration=\".35s\"><img class=\"pulsate-fwd\" src=\""+x[1]+"\" alt=\""+x[0]+" Logo\"></div>") 
                 : document.getElementById('logos').innerHTML += ("<div class=\"EPname wow fadeInBottom\"  data-wow-duration=\".35s\"><p>"+x[0]+"</p></div>")
         })
     }
