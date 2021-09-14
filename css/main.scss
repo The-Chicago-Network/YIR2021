@@ -832,11 +832,12 @@ noscript {
 .memberList {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     p {
         margin-right: 3rem;
         margin-top: 3rem;
         font-size: .8rem;
+        width: 25%;
     }
 }
 
