@@ -213,4 +213,105 @@ document.addEventListener('DOMContentLoaded', () => {
     APPLYCLASS("stat", textColors);
     APPLYCLASS("statHex", bgColors);
     APPLYCLASS("eventHex", eventColors)
+
+    const posts = [
+        {
+            id: "insta1",
+            url: "https://www.instagram.com/p/CGkuT8il1Yw/",
+            fileName: "1.jpg",
+            likes: 29,
+            caption: "Thrilled to present @wnba Commissioner Cathy Engelbert in the first of our Women in the Forefront 2020 events! ",
+            alt: "An image of a screen displaying Cathy Engelbert speaking via a teleconference.",
+            hashtags: "#whatittakes"
+        },
+        {
+            id: "insta2",
+            url: "https://www.instagram.com/p/CG73fmeBCOp/",
+            fileName: "2.jpg",
+            likes: 15,
+            caption: "Today is #LatinaEqualPayDay. Let’s close the gap.",
+            alt: "An image citing statiscice concerning latinas in the workplace: Latinas represent 8.7% of the population. By 2060, one in three women will be latina. Latinas, on average, earn 53 cents of every dollar earned by white, non-hispanic men. For latinas, the higher their education level, the higher the gap, despite the fact that latinas negotiate for a raise as often as white men. Latinas have to work twice as hard or nearly twice as long for the same paycheck. Paying women equally would have added $512.6 billion to the national income in one year. Nearly one in three americans don't know this gap exists. Latina equal pay day.",
+            hashtags: ""
+        },
+        {
+            id: "insta3",
+            url: "https://www.instagram.com/p/CEXAAdqjrr1/",
+            fileName: "3.jpg",
+            likes: 23,
+            caption: "What’s your vision for women’s equality? ",
+            alt: "An image that says: Celebrating Women's Equality Day 8/26.",
+            hashtags: "#WomensEqualityDay2020"
+        },
+        {
+            id: "insta4",
+            url: "https://www.instagram.com/p/CQteCSvLOVn/",
+            fileName: "4.jpg",
+            likes: 33,
+            caption: "",
+            alt: "An overhead image showing dozens of round tables with place-settings in front of a large stage lit with blue and pink lights and a large screen suspended from the ceiling.",
+            hashtags: "#WIFL2021"
+        },
+        {
+            id: "insta5",
+            url: "https://www.instagram.com/p/CGGMVlylYOT/",
+            fileName: "5.jpg",
+            likes: 29,
+            caption: "Congratulations to TCN member Adela Cepeda, who was recently named one of @alpfa’s most powerful latinas!",
+            alt: "A headshot of Adela Cepeda",
+            hashtags: "#whatittakes"
+        },
+        {
+            id: "insta6",
+            url: "https://www.instagram.com/p/CLey2ctH2zD/",
+            fileName: "6.jpg",
+            likes: 50,
+            caption: "\"You never completely have your rights, one person, until you all have your rights.\" - Marsha P. Johnson",
+            alt: "",
+            hashtags: ""
+        },
+        {
+            id: "insta7",
+            url: "https://www.instagram.com/p/CLey2ctH2zD/",
+            fileName: "7.jpg",
+            likes: 29,
+            caption: "Thrilled to present @wnba Commissioner Cathy Engelbert in the first of our Women in the Forefront 2020 events! ",
+            alt: "A headshot of Cathy Engelbert",
+            hashtags: "#whatittakes"
+        }
+    ];
+
+    const instaPosts = document.getElementById('instaFigBasket');
+    const generateFigures = (containerElement, arr, profileImageURL) => {
+        arr.forEach((figure) => {
+            console.log(containerElement.innerHTML += `
+            <figure class="wow fade-in-bottom">
+                <a href="${figure.url}"><img src="/images/2021/INSTA/${figure.fileName}" alt="${figure.alt}"></a>
+                <div class="instaDetailsContainer">
+                <div class="profileImgBorder">
+                    <div class="profileImgContainer" style="background-image: url('${profileImageURL}');
+                background-size: cover;">
+                </div>
+                    </div>
+                <div class="likesContainer">
+                <svg class="heart" viewBox="0 0 32 29.6">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                    </svg> 
+                <p><span>${figure.likes}</span> Likes</p>
+                </div>
+            </div>
+                <hr>
+                <figcaption>
+                ${figure.caption}
+                <br><br>
+                <span>
+                ${figure.hashtags}
+                </span>
+                </figcaption>
+            </figure>
+            `);
+        })
+    };
+
+    generateFigures(instaPosts, posts, '/images/2021/INSTA/profile.jpg');
 })

@@ -260,13 +260,13 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
   
   
 .fade-in-bottom {
-	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
-	animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+	animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
 }
 
 .text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
-	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.2s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.2s both;
 }
 
 .text-pop-up-top {
@@ -276,7 +276,7 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
 
 .pulsate-fwd:hover {
 	-webkit-animation: pulsate-fwd 0.5s ease-in-out both;
-	animation: pulsate-fwd 0.5s ease-in-out both;
+	animation: pulsate-fwd 0.2s ease-in-out both;
 }
 
 .kenburns-top {
@@ -410,7 +410,7 @@ body {
 }
 
 #initiativesTransition {
-    background-image: url("../images/Transfer/11.jpg");
+    background-image: url("../images/Transfer/7.jpg");
     @extend %filter;
 }
 
@@ -512,6 +512,74 @@ nav {
                 background-color: rgba(255, 255, 255, .2);
             }  
         }
+    }
+}
+
+#linkedInFig {
+    width: 100%
+}
+
+.instaFigBasket {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    figure {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        border-radius: .25rem;
+        width: 20rem;
+        overflow: hidden;
+        padding: 1rem;
+      hr {
+        border: .5px solid #dbdbdb;
+      }
+        img {
+            width: 100%;
+            border-radius: .25rem;
+        }
+      .instaDetailsContainer {
+        padding-top: 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        .likesContainer {
+          display: flex;
+          flex-flow: row nowrap;
+          padding-left: 1rem;
+          margin: 0;
+          align-items: center;
+          .heart {
+            width: 1rem;
+            height: 1rem;
+            fill: red;
+          }
+          p {
+            padding-left: .25rem;
+            margin: 0;
+          }
+        }
+        .profileImgBorder {
+            border: .5px solid #dbdbdb;
+            border-radius: 50%;
+        }
+        .profileImgContainer {
+            width: 3rem;
+            height: 3rem;
+            clip-path: circle(50% at 50% 50%);
+          }
+      }
+        figcaption {
+            font-size: 1rem;;
+            margin-top: 1rem;
+          span {
+            word-spacing: 20vw;
+            font-weight: $weight-regular;
+          }
+        }
+    }
+}
+
+#social {
+    &.slide {
+        min-height: 0;
     }
 }
 
