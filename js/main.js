@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arr.forEach((figure) => {
             console.log(containerElement.innerHTML += `
             <figure class="wow fade-in-bottom">
-                <a href="${figure.url}"><img src="/images/2021/INSTA/${figure.fileName}" alt="${figure.alt}"></a>
+                <a href="${figure.url}"><img src="images/2021/INSTA/${figure.fileName}" alt="${figure.alt}"></a>
                 <div class="instaDetailsContainer">
                 <div class="profileImgBorder">
                     <div class="profileImgContainer" style="background-image: url('${profileImageURL}');
@@ -313,5 +313,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     };
 
-    generateFigures(instaPosts, posts, '/images/2021/INSTA/profile.jpg');
+    generateFigures(instaPosts, posts, 'images/2021/INSTA/profile.jpg');
 })
