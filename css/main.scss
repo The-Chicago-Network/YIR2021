@@ -6,6 +6,9 @@ $weight-light: 200;
 $weight-regular: 400;
 $weight-bold: 700;
 
+$mobile-size: 3rem;
+
+
 //Colors
 $light-blue: #48a7a7;           //rgb(72,167,167)
 $dark-blue: #4885aa;            //rgb(72,133,170)
@@ -75,8 +78,13 @@ $dark-pink: #ad96a4;            //rgb(173,150,164)
     transition-timing-function: ease;
 }
 
-%parallax{
+%parallax {
     background-attachment: fixed;
+    @supports (-webkit-overflow-scrolling: touch) {
+        @media screen and (max-width: 1000px) {
+            background-attachment: scroll;
+        }
+    }
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -311,6 +319,11 @@ section {
     margin-bottom: 2rem;
     transition: all .5s;
     width: 12rem;
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        height: 5rem;
+        font-size: 2rem;
+    }
 }
 
 %button-transition {
@@ -335,6 +348,10 @@ body {
     font-weight: $weight-light;
     font-size: 1.25rem;
     width: 100vw;
+    @media screen and (max-width: 1000px) {
+        font-weight: $weight-regular;
+        font-size: $mobile-size;
+    }
 }
 
 .cateShow {
@@ -401,6 +418,9 @@ body {
     img {
         max-height: 2rem;
         margin: 1rem;
+        @media screen and (max-width: 1000px) {
+            max-height: 4rem;
+        }
     }
     padding: 1rem;
 }
@@ -445,15 +465,19 @@ h1, h2 {
 }
 
 h1 {
-    //margin-top: -5rem;
+    // margin-top: -5rem;
     color: $dark-gray;//$light-blue;
     text-align: center;
     z-index: 2;
-    animation: neon 3s infinite;
+    // animation: neon 3s infinite;
 
     #h1date {
         font-size: 15rem;
         line-height: 13rem;
+        @media screen and (max-width: 1000px) {
+            font-size: 25rem;
+            line-height: 20rem;
+        }
     }
     
     #h1sub {
@@ -461,6 +485,9 @@ h1 {
         letter-spacing: 1rem;
         color: $dark-gray;//$gray;
         margin-left: -1.8rem;
+        @media screen and (max-width: 1000px) {
+            font-size: 4.5rem;
+        }
     }
 }
 
@@ -529,6 +556,9 @@ nav {
         width: 20rem;
         overflow: hidden;
         padding: 1rem;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+        }
       hr {
         border: .5px solid #dbdbdb;
       }
@@ -550,6 +580,10 @@ nav {
             width: 1rem;
             height: 1rem;
             fill: red;
+            @media screen and (max-width: 1000px) {
+                width: 2rem;
+                height: 2rem;
+            }
           }
           p {
             padding-left: .25rem;
@@ -564,11 +598,18 @@ nav {
             width: 3rem;
             height: 3rem;
             clip-path: circle(50% at 50% 50%);
+            @media screen and (max-width: 1000px) {
+                width: 4rem;
+                height: 4rem;
+            }
           }
       }
         figcaption {
-            font-size: 1rem;;
+            font-size: 1rem;
             margin-top: 1rem;
+            @media screen and (max-width: 1000px) {
+                font-size: $mobile-size;
+            }
           span {
             word-spacing: 20vw;
             font-weight: $weight-regular;
@@ -595,9 +636,18 @@ header {
     flex-flow: row wrap;
     width: 100%;
     padding: 0;
-    div {
+    @media screen and (max-width: 1000px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    div:not(.hex) {
         width: 15rem;
         position: relative;
+        @media screen and (max-width: 1000px) {
+            align-self: center;
+            width: 65%;
+            padding-left: 15%;
+        }
     }
 }
 
@@ -610,6 +660,9 @@ div #covidProgramming.slide {
     max-width: 60rem;
     text-align: center;
     margin: auto;
+    @media screen and (max-width: 1000px) {
+        width: 70%;
+    }
 }
 
 .event {
@@ -626,6 +679,9 @@ div #covidProgramming.slide {
     padding: 1rem;
     color: white;
     margin-bottom: 2rem;
+    @media screen and (max-width: 1000px) {
+        font-size: $mobile-size;
+    }
     .quoteAttr {
         font-size: 1rem;
         line-height: 1;
@@ -659,7 +715,10 @@ div #covidProgramming.slide {
     background-size: cover;
     overflow: hidden;
     h2 {
-        font-size: 3rem;
+        font-size: 5rem;
+        @media screen and (max-width: 1000px) {
+            font-size: 6rem;
+        }
     }
 }
 
@@ -672,9 +731,6 @@ div #covidProgramming.slide {
 .transition {
     padding: 20rem 10rem 20rem 10rem;
     background-position: center top;
-    h2 {
-        font-size: 5rem;
-    }
 }
 
 .statsWrapper {
@@ -691,6 +747,11 @@ div #covidProgramming.slide {
         align-items: center;
         align-content: center;
         margin-bottom: 5rem;
+        @media screen and (max-width: 1000px) {
+            max-width: 100%;
+            width: 100%;
+            justify-content: center;
+        }
         span {
             font-size: 7rem;
             margin-right: 1rem;
@@ -701,8 +762,14 @@ div #covidProgramming.slide {
 
 .statWrapper:nth-child(2), .statWrapper:nth-child(4) {
     max-width: 25rem;
+    @media screen and (max-width: 1000px) {
+        max-width: 100%;
+    }
     p {
         font-size: .85rem;
+        @media screen and (max-width: 1000px) {
+            font-size: 2.5rem;
+        }
     }
 }
 
@@ -719,21 +786,38 @@ div #covidProgramming.slide {
     font-size: 1rem;
     height: 10rem;
     width: 10rem;
+    min-height: 10rem;
+    min-width: 10rem;
     display: flex;
     align-content: center;
     text-align: center;
     align-items: center;
+    @media screen and (max-width: 1000px) {
+        height: 30rem;
+        width: 30rem;
+        min-height: 30rem;
+        min-width: 30rem;
+        font-size: 2.5rem;
+    }
     p {
         width: 10rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         margin: auto;
+        @media screen and (max-width: 1000px) {
+            width: 20rem;
+        }
     }
 }
 .bbButton {
     @extend %button;
     margin-top: 2rem;
     width: 20rem;
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        height: 7rem;
+        font-size: 2rem;
+    }
 }
 
 .bbButton:hover {
@@ -809,6 +893,9 @@ table {
 
     td:nth-child(2) {
         max-width: 9rem;
+        @media screen and (max-width: 1000px) {
+            max-width: 50%;
+        }
     }
 
     td.color-bar {
@@ -821,6 +908,9 @@ table {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    @media screen and (max-width: 1000px) {
+        justify-content: center;
+    }
 
     .EPlogo, .EPname {
         background-color: white;
@@ -833,6 +923,10 @@ table {
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 1000px) {
+            width: 15rem;
+            height: 15rem;
+        }
         @extend %quick-transition;
 
         img {
@@ -900,21 +994,27 @@ noscript {
 
 .figBasket {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     figure {
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         border-radius: .25rem;
-        width: 30vw;
+        width: 35%;
         overflow: hidden;
         padding: 1rem;
+        @media screen and (max-width: 1000px) {
+            width: 50rem;
+        }
         img {
             width: 100%;
             border-radius: .25rem;
         }
         figcaption {
-            font-size: .9rem;;
+            font-size: .9rem;
             font-weight: $weight-regular;
             margin-top: 1rem;
+            @media screen and (max-width: 1000px) {
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -923,11 +1023,19 @@ noscript {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
+    @media screen and (max-width: 1000px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
     p {
         margin-right: 3rem;
         margin-top: 3rem;
         font-size: .8rem;
         width: 25%;
+        @media screen and (max-width: 1000px) {
+            font-size: $mobile-size;
+            min-width: 100%;
+        }
     }
 }
 
@@ -1094,8 +1202,16 @@ blockquote {
 .mugshot {
     width: 10rem;
     height: 10rem;
+    @media screen and (max-width: 1000px) {
+        width: 30rem;
+        height: 30rem;
+        align-self: center;
+    }
     img {
         width: 10rem;
+        @media screen and (max-width: 1000px) {
+            width: 30rem;
+        }
     }
 }
 
@@ -1104,9 +1220,26 @@ blockquote {
     flex-flow: row wrap;
     font-size: .8rem;
     justify-content: space-between;
+    @media screen and (max-width: 1000px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    p {
+        @media screen and (max-width: 1000px) {
+            font-size: $mobile-size;
+        }
+    }
     .staffContainer {
         width: 10rem;
         margin: 1rem;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            font-size: $mobile-size;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            text-align: center;
+        }
         a {
             color: $light-blue;
         }
@@ -1169,6 +1302,10 @@ blockquote {
         height: 20rem;
         overflow: hidden;
         margin: 1rem;
+        @media screen and (max-width: 1000px) {
+            width: 50rem;
+            height: 40rem;
+        }
         img {
             width: 100%;
         }
@@ -1184,6 +1321,14 @@ blockquote {
     margin-left: -2rem;
     position: relative;
     z-index: 0;
+    @media screen and (max-width: 1000px) {
+        width: 20rem;
+        height: 20rem;
+        max-width: 20rem;
+        max-height: 20rem;
+        margin-bottom: -15rem;
+        margin-left: -4rem;
+    }
 }
 
 .hide {
